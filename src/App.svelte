@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<h1 class="text-center text-red-500 text-5xl">Hello {name}!</h1>
+	<h1 class="text-center text-primary text-5xl">Hello {name}!</h1>
 	<p class="text-center text-xl">Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
