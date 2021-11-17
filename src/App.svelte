@@ -1,10 +1,14 @@
 <script lang="ts">
+	import { isLoading, _ } from 'svelte-i18n'
 	export let name: string;
 </script>
 
 <main>
-	<h1 class="text-center text-primary text-5xl">Hello {name}!</h1>
-	<p class="text-center text-xl">Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	{#if $isLoading}
+		Please wait
+	{:else }
+		<h1 class="text-center text-primary text-5xl">{$_('hello', { values: { name: $_(name) } })}</h1>
+	{/if}
 </main>
 
 <style global lang="postcss">
