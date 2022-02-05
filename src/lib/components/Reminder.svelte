@@ -26,7 +26,7 @@
     function edit(this: HTMLElement) {
         this.blur();
         edited = !edited;
-        dispatcher('edit');
+        dispatcher('edit', { edited });
     }
 
     function deleteReminder(this: HTMLElement) {
