@@ -1,0 +1,39 @@
+{
+    "days": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+    "daysShort": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+    "daysMin": ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"],
+    "months": [
+        "Janvier",
+        "Février",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juillet",
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre"
+    ],
+    "monthsShort": [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Avr",
+        "Mai",
+        "Jun",
+        "Jui",
+        "Aoû",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ],
+    "meridiem": ["am", "pm"],
+    "suffix": ["st", "nd", "rd", "th"],
+    "todayBtn": "Aujourd'hui",
+    "clearBtn": "Effacer",
+    "timeView": "Modifier l'heure",
+    "backToDate": "Retour à l'edition de la date"
+}

@@ -1,4 +1,7 @@
 import i18n, { type Config } from 'sveltekit-i18n';
+import { config } from 'svelty-picker';
+import 'dayjs/locale/fr';
+import dayjs from 'dayjs';
 
 const LOCALES = ['en', 'fr'];
 const DEFAULT_LOCALE = 'en';
@@ -17,8 +20,10 @@ function createConfig(): Config {
     return { loaders };
 }
 
-export const config: Config = createConfig();
-export const { t, locale, locales, loading, loadTranslations } = new i18n(config);
+export { dayjs };
+
+export const i18nConfig: Config = createConfig();
+export const { t, locale, locales, loading, loadTranslations } = new i18n(i18nConfig);
 
 function doLocaleMatch(userLocale: string) {
     for (const appLocale of LOCALES) {
@@ -42,7 +47,12 @@ function getMatchLocale(locales: string[]) {
     return DEFAULT_LOCALE;
 }
 
-export function initializeTranslations(pathname: string, locales: string[]) {
+export async function initializeTranslations(pathname: string, locales: string[]) {
     const initLocale = locale.get() || getMatchLocale(locales);
-    return loadTranslations(initLocale, pathname);
+    dayjs.locale('fr');
+
+    await Promise.all([
+        loadTranslations(initLocale, pathname),
+        import(`./locales/dates/${initLocale}.json`).then((data) => (config.i18n = data.default)),
+    ]);
 }

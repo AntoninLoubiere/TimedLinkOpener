@@ -2,3 +2,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .container-background {
+        @apply text-black dark:text-white bg-white dark:bg-gray-900;
+    }
+
+    .container-elevated-background {
+        @apply text-black dark:text-white bg-gray-200 dark:bg-gray-700;
+    }
+}
+
+@layer components {
+    html {
+        @apply container-background text-sm md:text-base;
+    }
+
+    .input {
+        @apply px-2 py-1 my-1 border-gray-300 dark:border-gray-700 border rounded-md bg-inherit
+			focus-visible:ring focus-visible:ring-primary focus-visible:outline-none focus-visible:border-transparent
+			hover:border-primary-variant
+            invalid:text-red-500 invalid:border-red-500;
+    }
+
+    .button-base {
+        @apply px-4 py-1 text-white text-lg uppercase rounded-lg font-semibold shadow-md hover:brightness-125 active:brightness-90 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .button {
+        @apply button-base bg-primary dark:bg-primary-dark;
+    }
+
+    .button-outline {
+        @apply button-base bg-inherit text-primary border-2 border-current;
+    }
+
+    .button-icon {
+        @apply p-1 rounded-lg
+            outline-none
+            hover:brightness-125 active:brightness-90 disabled:opacity-50 disabled:cursor-not-allowed
+            hover:text-primary dark:hover:text-primary-dark
+            focus-visible:ring focus-visible:ring-primary dark:focus-visible:ring-primary-dark
+            focus-visible:text-primary dark:focus-visible:text-primary-dark;
+    }
+
+    .button-icon-red {
+        @apply button-icon hover:text-red-500 focus-visible:text-red-500;
+    }
+
+    .button-popup-icon {
+        @apply absolute right-1 opacity-0 group-hover:opacity-100 focus-within:opacity-100 container-elevated-background rounded-md;
+    }
+
+    input {
+        @apply input cursor-text;
+    }
+
+    select {
+        @apply input cursor-pointer;
+    }
+
+    textarea {
+        @apply input;
+    }
+
+    .link {
+        @apply text-primary dark:text-primary-dark underline;
+    }
+}
