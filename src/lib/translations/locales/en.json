@@ -1,3 +1,5 @@
 {
-    "welcome-to-sveltekit": "Welcome to SvelteKit"
+    "welcome-to-sveltekit": "Welcome to SvelteKit",
+    "label-url": "Url:",
+    "label-date": "Date:"
 }

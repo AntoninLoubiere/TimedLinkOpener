@@ -7,6 +7,7 @@ const config = {
                 primary: {
                     DEFAULT: '#174682',
                     variant: '#5576b7',
+                    dark: '#2777E1',
                 },
                 accent: {
                     DEFAULT: '#d6a419',
