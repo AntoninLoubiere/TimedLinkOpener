@@ -3,3 +3,5 @@ interface TimedLink {
     url: string;
     openDate: Date;
 }
+
+declare module 'svelty-picker';
